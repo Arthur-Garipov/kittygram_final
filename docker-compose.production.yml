@@ -23,7 +23,7 @@ services:
     image: arthursleng/kittygram_frontend
     command: cp -r /app/build/. /static/
     volumes:
-      - static:/frontend_static
+      - static:/static
   gateway:
     image: arthursleng/kittygram_gateway
     env_file: .env
