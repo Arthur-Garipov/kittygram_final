@@ -3,9 +3,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm ci
-
-RUN npm run build
-RUN npm install --global http-server
+RUN npm ci && npm run build && npm install --global http-server
 
 CMD ["npx", "-y", "http-server", "-p", "9000", "/app/build"]
